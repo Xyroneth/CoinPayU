@@ -21,5 +21,34 @@
     <div id="root"></div>
 
     <!-- Vite Entry -->
-  </body>
+  
+<style>
+.cta-gradient {
+  background: linear-gradient(90deg, #8b5cf6, #6366f1, #10b981) !important;
+  color: #000 !important;
+  padding: 12px 28px !important;
+  border-radius: 14px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.35) !important;
+}
+.cta-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(139, 92, 246, 0.55) !important;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll("a, button");
+  elements.forEach(el => {
+    const text = el.textContent.trim();
+    if (text.includes("Join Now") || text.includes("Create Free Account")) {
+      el.classList.add("cta-gradient");
+    }
+  });
+});
+</script>
+
+</body>
 </html>
